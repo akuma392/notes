@@ -1,0 +1,28 @@
+# Linear Search in JavaScript
+
+Linear Search (also called Sequential Search) is a simple searching algorithm that checks each element of the array one by one until the target value is found.
+
+---
+
+## ✅ Linear Search Code (JavaScript)
+
+```javascript
+function linearSearch(arr, target) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === target) return i; // return index if found
+  }
+  return -1; // return -1 if not found
+}
+
+console.log(linearSearch([10, 20, 30, 40], 30));
+// Output: 2
+
+console.log(linearSearch([10, 20, 30, 40], 50));
+// Output: -1
+```
+
+| Case         | Time Complexity |
+| ------------ | --------------- |
+| Best Case    | O(1)            |
+| Average Case | O(n)            |
+| Worst Case   | O(n)            |
