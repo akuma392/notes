@@ -1,0 +1,45 @@
+# Binary Search in JavaScript
+
+Binary Search is an efficient searching algorithm that works only on a **sorted array**.  
+It repeatedly divides the search range into half until the target element is found or the range becomes empty.
+
+---
+
+## ⚠️ Important Note
+
+✅ Binary Search works only if the array is **sorted** (ascending order).
+
+Example sorted array:
+```js
+[2, 4, 6, 8, 10, 12]
+
+
+function binarySearch(arr, target) {
+  let left = 0;
+  let right = arr.length - 1;
+
+  while (left <= right) {
+    const mid = Math.floor((left + right) / 2);
+
+    if (arr[mid] === target) return mid;
+
+    if (arr[mid] < target) {
+      left = mid + 1;
+    } else {
+      right = mid - 1;
+    }
+  }
+
+  return -1; // target not found
+}
+console.log(binarySearch([2, 4, 6, 8, 10, 12], 10));
+// Output: 4
+
+console.log(binarySearch([2, 4, 6, 8, 10, 12], 5));
+// Output: -1
+
+| Case                            | Complexity   |
+| ------------------------------- | ------------ |
+| Best Case (target found at mid) | **O(1)**     |
+| Average Case                    | **O(log n)** |
+| Worst Case                      | **O(log n)** |
