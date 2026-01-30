@@ -20,3 +20,10 @@ console.log(linearSearch([10, 20, 30, 40], 30));
 console.log(linearSearch([10, 20, 30, 40], 50));
 // Output: -1
 
+| Case         | Time Complexity |
+| ------------ | --------------- |
+| Best Case    | O(1)            |
+| Average Case | O(n)            |
+| Worst Case   | O(n)            |
+
+
