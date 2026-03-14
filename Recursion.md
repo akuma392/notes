@@ -27,9 +27,9 @@ Example:
 
 ---
 
-## Solution (JavaScript)
+# Solution (JavaScript)
 
-```javascript
+
 function factorial(n) {
   if (n === 0 || n === 1) {
     return 1;
@@ -56,7 +56,7 @@ Output:
 
 ## Solution 1
 
-```javascript
+
 function productOfAnArray(arr) {
   if (arr.length === 1) {
     return arr[0];
@@ -93,7 +93,7 @@ Explanation:
 
 ## Solution (JavaScript)
 
-```javascript
+
 function recursiveRange(n){
   if(n === 0){
     return 0
@@ -102,5 +102,31 @@ function recursiveRange(n){
 }
 
 console.log(recursiveRange(6)) // 21
+
+# Fibonacci Number using Recursion
+
+## Problem
+Write a recursive function that returns the **nth Fibonacci number**.
+
+The Fibonacci sequence is defined as:
+
+0, 1, 1, 2, 3, 5, 8, 13, ...
+
+Where:
+- fib(0) = 0  
+- fib(1) = 1  
+- fib(n) = fib(n-1) + fib(n-2)
+
+---
+
+## Solution (JavaScript)
+
+```javascript
+function fib(n){
+  // add whatever parameters you deem necessary - good luck!
+  if(n === 0 || n === 1) return n;
+  return fib(n - 1) + fib(n - 2);
+}
+
 
 
