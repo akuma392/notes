@@ -73,4 +73,34 @@ function productOfAnArray(arr) {
   return arr[0] * productOfAnArray(arr.slice(1));
 }
 
+# Recursive Range (Sum of Numbers)
+
+## Problem
+Write a recursive function that returns the **sum of all numbers from `n` down to `0`**.
+
+### Example
+
+Input:
+recursiveRange(6)
+
+Output:
+21
+
+Explanation:
+6 + 5 + 4 + 3 + 2 + 1 + 0 = 21
+
+---
+
+## Solution (JavaScript)
+
+```javascript
+function recursiveRange(n){
+  if(n === 0){
+    return 0
+  }
+  return n + recursiveRange(n-1)
+}
+
+console.log(recursiveRange(6)) // 21
+
 
