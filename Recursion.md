@@ -39,3 +39,38 @@ function factorial(n) {
 
 console.log(factorial(3)); // 6
 
+# Product of Array using Recursion
+
+## Problem
+Write a function that returns the **product of all numbers in an array** using recursion.
+
+Example:
+
+Input:
+[3, 4, 10, 100]
+
+Output:
+12000
+
+---
+
+## Solution 1
+
+```javascript
+function productOfAnArray(arr) {
+  if (arr.length === 1) {
+    return arr[0];
+  }
+
+  return arr[arr.length - 1] * productOfAnArray(arr.slice(0, arr.length - 1));
+}
+
+console.log(productOfAnArray([3, 4, 10, 100])); // 12000
+
+# shorter solutions 
+function productOfAnArray(arr) {
+  if (arr.length === 0) return 1;
+  return arr[0] * productOfAnArray(arr.slice(1));
+}
+
+
