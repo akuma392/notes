@@ -11,6 +11,7 @@ Binary Search is an efficient searching algorithm that works only on a **sorted 
 Example sorted array:
 ```js
 [2, 4, 6, 8, 10, 12]
+
 ```
 
 ```js
