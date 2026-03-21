@@ -7,6 +7,7 @@ Linear Search (also called Sequential Search) is a simple searching algorithm th
 ## ✅ Linear Search Code (JavaScript)
 
 ```javascript
+
 function linearSearch(arr, target) {
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] === target) return i; // return index if found
