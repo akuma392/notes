@@ -16,6 +16,7 @@ function linearSearch(arr, target) {
 }
 
 console.log(linearSearch([10, 20, 30, 40], 30));
+
 // Output: 2
 
 console.log(linearSearch([10, 20, 30, 40], 50));
