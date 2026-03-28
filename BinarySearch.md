@@ -37,6 +37,7 @@ function binarySearch(arr, target) {
 // Examples
 console.log(binarySearch([2, 4, 6, 8, 10, 12], 10)); // Output: 4
 console.log(binarySearch([2, 4, 6, 8, 10, 12], 5));  // Output: -1
+
 ```
 
 | Case                            | Complexity   |
