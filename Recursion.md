@@ -52,9 +52,7 @@ Output:
 12000
 
 ---
-
 ## Solution 1
-
 
 function productOfAnArray(arr) {
   if (arr.length === 1) {
