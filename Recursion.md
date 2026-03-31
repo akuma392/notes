@@ -12,7 +12,6 @@ function power(n, pow) {
 
 console.log(power(2, 2)); // 4
 
-
 # Factorial using Recursion
 
 ## Problem
