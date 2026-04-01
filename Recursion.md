@@ -87,7 +87,6 @@ Explanation:
 
 ## Solution (JavaScript)
 
-
 function recursiveRange(n){
   if(n === 0){
     return 0
