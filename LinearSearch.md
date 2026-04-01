@@ -14,7 +14,6 @@ function linearSearch(arr, target) {
   }
   return -1; // return -1 if not found
 }
-
 console.log(linearSearch([10, 20, 30, 40], 30));
 
 // Output: 2
