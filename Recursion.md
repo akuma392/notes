@@ -59,7 +59,6 @@ function productOfAnArray(arr) {
 
   return arr[arr.length - 1] * productOfAnArray(arr.slice(0, arr.length - 1));
 }
-
 console.log(productOfAnArray([3, 4, 10, 100])); // 12000
 
 # shorter solutions 
