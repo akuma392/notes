@@ -49,3 +49,10 @@ const input = [64, 25, 12, 22, 11];
 const sorted = selectionSort(input);
 
 console.log(sorted);
+
+| Case         | Time Complexity |
+| ------------ | --------------- |
+| Best Case    | O(n²)           |
+| Average Case | O(n²)           |
+| Worst Case   | O(n²)           |
+
