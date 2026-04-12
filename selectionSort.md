@@ -41,3 +41,11 @@ function selectionSort(arr) {
 
   return arr;
 }
+
+## ▶️ Example
+
+```javascript
+const input = [64, 25, 12, 22, 11];
+const sorted = selectionSort(input);
+
+console.log(sorted);
