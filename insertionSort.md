@@ -1,3 +1,8 @@
+## 📌 Insertion Sort (JavaScript)
+
+### 💻 Code
+
+```javascript
 function insertionSort(arr) {
   for (let i = 1; i < arr.length; i++) {
     let currentVal = arr[i];
