@@ -25,4 +25,11 @@ function insertionSort(arr) {
 ```javascript
 const arr = [5, 2, 4, 6, 1, 3];
 
+| Case         | Time Complexity | Explanation                      |
+| ------------ | --------------- | -------------------------------- |
+| Best Case    | O(n)            | Already sorted, only comparisons |
+| Average Case | O(n²)           | Partial shifting                 |
+| Worst Case   | O(n²)           | Reverse order, maximum shifts    |
+
+
 
