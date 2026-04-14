@@ -17,3 +17,12 @@ function insertionSort(arr) {
   }
   return arr;
 }
+
+# 📌 Insertion Sort Examples
+
+## ▶️ Example 1
+
+```javascript
+const arr = [5, 2, 4, 6, 1, 3];
+
+
