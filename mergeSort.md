@@ -52,3 +52,10 @@ Example breakdown:
 → [2,5] [4,6]
 → [2,4,5,6]
 
+| Case         | Time Complexity |
+| ------------ | --------------- |
+| Best Case    | O(n log n)      |
+| Average Case | O(n log n)      |
+| Worst Case   | O(n log n)      |
+
+
