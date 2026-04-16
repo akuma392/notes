@@ -34,3 +34,8 @@ function merge(left, right) {
 
   return [...result, ...left.slice(i), ...right.slice(j)];
 }
+const arr = [38, 27, 43, 3, 9, 82, 10];
+const sorted = mergeSort(arr);
+
+console.log(sorted);
+
