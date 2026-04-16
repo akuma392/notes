@@ -39,3 +39,16 @@ const sorted = mergeSort(arr);
 
 console.log(sorted);
 
+How It Works
+Divide array into halves recursively
+Sort each half
+Merge sorted halves
+
+Example breakdown:
+
+[5,2,4,6]
+→ [5,2] [4,6]
+→ [5] [2] [4] [6]
+→ [2,5] [4,6]
+→ [2,4,5,6]
+
