@@ -44,6 +44,7 @@ Sort each half
 Merge sorted halves
 
 Example breakdown:
+
 [5,2,4,6]
 → [5,2] [4,6]
 → [5] [2] [4] [6]
