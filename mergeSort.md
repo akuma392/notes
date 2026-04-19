@@ -9,7 +9,6 @@ Merge Sort is a **divide and conquer** algorithm that divides the array into sma
 ```javascript
 function mergeSort(arr) {
   if (arr.length <= 1) return arr;
-
   let mid = Math.floor(arr.length / 2);
 
   let left = mergeSort(arr.slice(0, mid));
