@@ -48,19 +48,27 @@ class LinkedList{
     }
     return current;
   }
-shift(){
-  if (!this.head) return undefined;
-
-  let temp = this.head;
-  this.head = this.head.next;
-  temp.next = null;
-
-  this.length--;
-
-  if(this.length === 0){
-    this.tail = null;
+shift() {
+    if (!this.head) return undefined;
+    let temp = this.head;
+    this.head = temp.next;
+    temp.next = null;
+    this.length--;
+    if (this.length === 1) {
+      this.head = null;
+      this.tail = null;
+    }
   }
-
-  return temp;
-}
+ unshift(value) {
+    let newNode = new Node(value);
+    if (this.length === 0) {
+      this.head = newNode;
+      this.tail = this.head;
+    } else {
+      newNode.next = this.head;
+      this.head = newNode;
+    }
+    this.length++;
+    return this;
+  }
 }
