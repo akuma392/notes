@@ -71,4 +71,5 @@ shift() {
     this.length++;
     return this;
   }
+set(){}
 }
