@@ -72,4 +72,5 @@ shift() {
     return this;
   }
 set(){}
+get(){}
 }
