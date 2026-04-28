@@ -1,9 +1,14 @@
 
-class Node{
-    constructor(value){
-        this.value = value;
-        this.next = null;
-    }
+# Stack Implementation using Linked List (JavaScript)
+
+## 🧱 Node Class
+
+```js
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.next = null;
+  }
 }
 
 class Stack{
