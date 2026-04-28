@@ -24,10 +24,10 @@ class Stack {
     if (!this.first) {
       this.first = this.last = newNode;
     } else {
-      newNode.next = this.first;
+      let temp = this.first;
       this.first = newNode;
-    }
-
+      this.first.next = temp
+     }
     return ++this.size;
   }
 
