@@ -89,4 +89,15 @@ class Queue {
         this.size--;
         return temp.val
     }
+    getMin(){
+      let min = this.first.value;
+      let current = this.first;
+      while(current.next){
+       if(min > current.value) {
+         min = current.value
+        }
+       current=current.next;
+      }
+     return min;
+    }
 }
