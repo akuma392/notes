@@ -140,6 +140,24 @@ class LinkedList {
     this.length--;
     return removed;
   }
+  reverse() {
+    let prev = null;
+    let current = this.head;
+
+    // swap head and tail
+    this.tail = this.head;
+
+    while (current) {
+      let next = current.next; // store next
+      current.next = prev;     // reverse link
+
+      prev = current;          // move prev
+      current = next;          // move current
+    }
+
+    this.head = prev; // new head
+    return this;
+  }
 }
 ```
 
