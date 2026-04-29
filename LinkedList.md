@@ -147,16 +147,16 @@ class LinkedList {
 
 ## ⏱️ Time Complexity Analysis
 
-| Operation | Time Complexity | Space Complexity | Notes |
-|-----------|-----------------|------------------|-------|
-| **push()** | O(1) | O(1) | Append to end (we track tail) |
-| **pop()** | O(n) | O(1) | Must traverse to find second-to-last node |
-| **shift()** | O(1) | O(1) | Remove from start (update head) |
-| **unshift()** | O(1) | O(1) | Add to start (update head) |
-| **get(index)** | O(n) | O(1) | Must traverse from head to index |
-| **set(index, value)** | O(n) | O(1) | Uses get() internally |
-| **insert(index, value)** | O(n) | O(1) | Worst case: traverse to index |
-| **remove(index)** | O(n) | O(1) | Worst case: traverse to index |
+| Operation                | Time Complexity | Space Complexity | Notes                                     |
+| ------------------------ | --------------- | ---------------- | ----------------------------------------- |
+| **push()**               | O(1)            | O(1)             | Append to end (we track tail)             |
+| **pop()**                | O(n)            | O(1)             | Must traverse to find second-to-last node |
+| **shift()**              | O(1)            | O(1)             | Remove from start (update head)           |
+| **unshift()**            | O(1)            | O(1)             | Add to start (update head)                |
+| **get(index)**           | O(n)            | O(1)             | Must traverse from head to index          |
+| **set(index, value)**    | O(n)            | O(1)             | Uses get() internally                     |
+| **insert(index, value)** | O(n)            | O(1)             | Worst case: traverse to index             |
+| **remove(index)**        | O(n)            | O(1)             | Worst case: traverse to index             |
 
 **Key Insight**: Operations at the **start** are O(1), but operations in the **middle/end** are O(n) because we lack random access.
 
@@ -165,67 +165,83 @@ class LinkedList {
 ## 💡 Usage Examples
 
 ### 1. **push()** - Add element to end
+
 ```js
 let list = new LinkedList();
-list.push(10);   // List: 10
-list.push(20);   // List: 10 → 20
-list.push(30);   // List: 10 → 20 → 30
+list.push(10); // List: 10
+list.push(20); // List: 10 → 20
+list.push(30); // List: 10 → 20 → 30
 ```
+
 - **Time**: O(1) - Direct access to tail
 - **Use case**: Building list from data stream
 
 ### 2. **pop()** - Remove from end
+
 ```js
-list.pop();      // Removes 30, returns Node(30)
-                 // List: 10 → 20
+list.pop(); // Removes 30, returns Node(30)
+// List: 10 → 20
 ```
+
 - **Time**: O(n) - Must traverse to find second-to-last node
 - **Why slow**: Singly linked lists can't traverse backwards!
 
 ### 3. **shift()** - Remove from start
+
 ```js
-list.shift();    // Removes 10, returns Node(10)
-                 // List: 20
+list.shift(); // Removes 10, returns Node(10)
+// List: 20
 ```
+
 - **Time**: O(1) - Update head pointer
 - **Best operation**: Very efficient for removing first element
 
 ### 4. **unshift()** - Add to start
+
 ```js
 list.unshift(5); // List: 5 → 20
 list.unshift(1); // List: 1 → 5 → 20
 ```
+
 - **Time**: O(1) - Update head pointer
 - **Use case**: Prepending elements (like browser history)
 
 ### 5. **get(index)** - Access element at index
+
 ```js
-let node = list.get(1);  // Returns Node(5)
-node.value;              // 5
+let node = list.get(1); // Returns Node(5)
+node.value; // 5
 ```
+
 - **Time**: O(n) - Must traverse from head
 - **Limitation**: No random access like arrays
 
 ### 6. **set(index, value)** - Update value at index
+
 ```js
 list.set(0, 100); // Change first element to 100
-                  // List: 100 → 5 → 20
+// List: 100 → 5 → 20
 ```
+
 - **Time**: O(n) - Uses get() internally
 
 ### 7. **insert(index, value)** - Insert at specific position
+
 ```js
-list.insert(1, 15);  // Insert 15 at index 1
-                     // List: 100 → 15 → 5 → 20
+list.insert(1, 15); // Insert 15 at index 1
+// List: 100 → 15 → 5 → 20
 ```
+
 - **Time**: O(n) - Worst case traverse to index
 - **Advantage over arrays**: O(1) once you find the position
 
 ### 8. **remove(index)** - Remove element at index
+
 ```js
 let removed = list.remove(1); // Remove element at index 1 (value 15)
-                              // List: 100 → 5 → 20
+// List: 100 → 5 → 20
 ```
+
 - **Time**: O(n) - Must traverse to find previous node
 - **Special cases**: Optimized O(1) for index 0 and last index
 
@@ -238,20 +254,20 @@ let myList = new LinkedList();
 
 // Build list: 1 → 2 → 3 → 4 → 5
 myList.push(2).push(3).push(4).push(5);
-myList.unshift(1);  // Add at start
-console.log(myList.length);  // 5
+myList.unshift(1); // Add at start
+console.log(myList.length); // 5
 
 // Access and modify
-console.log(myList.get(2).value);  // 3
-myList.set(2, 30);                  // Change 3 to 30
+console.log(myList.get(2).value); // 3
+myList.set(2, 30); // Change 3 to 30
 
 // Insert in middle
-myList.insert(3, 35);  // List becomes: 1 → 2 → 30 → 35 → 4 → 5
+myList.insert(3, 35); // List becomes: 1 → 2 → 30 → 35 → 4 → 5
 
 // Remove elements
-myList.remove(1);      // Remove 2
-myList.pop();          // Remove last (5)
-myList.shift();        // Remove first (1)
+myList.remove(1); // Remove 2
+myList.pop(); // Remove last (5)
+myList.shift(); // Remove first (1)
 // Final list: 30 → 35 → 4
 ```
 
@@ -264,7 +280,7 @@ myList.shift();        // Remove first (1)
 3. **End Operations are Slow**: pop is O(n) - need to find predecessor
 4. **Middle Operations**: insert/remove/get are O(n) due to traversal
 5. **Memory Trade-off**: Extra memory for pointers, but flexible size
-6. **Best Use Cases**: 
+6. **Best Use Cases**:
    - Frequent additions/deletions at start
    - LRU caches, browser history
    - Implementing queues/stacks
@@ -281,10 +297,13 @@ class DNode {
   constructor(value) {
     this.value = value;
     this.next = null;
-    this.prev = null;  // Previous pointer
+    this.prev = null; // Previous pointer
   }
 }
 ```
 
 With `prev` pointers, you can traverse backwards from tail → O(1) pop() and efficient removal from end.
+
+```
+
 ```
