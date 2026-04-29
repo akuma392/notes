@@ -1,4 +1,3 @@
-
 # Stack Implementation using Linked List (JavaScript)
 
 ## 🧱 Node Class
@@ -10,94 +9,94 @@ class Node {
     this.next = null;
   }
 }
-class Stack{
-    constructor(){
-        this.first = null;
-        this.last = null;     
-        this.size = 0;
-    }
-    push(val){
-        var node = new Node(val);
+class Stack {
+  constructor() {
+    this.first = null;
+    this.last = null;
+    this.size = 0;
+  }
+  push(val) {
+    var node = new Node(val);
 
-        if (!this.first){
-            this.first = node;
-            this.last = node;
-        } else {
-            var tmp = this.first;
-            this.first=node;
-            this.first.next=tmp;
-        }
+    if (!this.first) {
+      this.first = node;
+      this.last = node;
+    } else {
+      var tmp = this.first;
+      this.first = node;
+      this.first.next = tmp;
+    }
 
-        return ++this.size;
+    return ++this.size;
+  }
+  pop() {
+    if (!this.first) return null;
+    let temp = this.first;
+    if (this.first === this.last) {
+      this.last = null;
     }
-    pop(){
-        if(!this.first) return null;
-        let temp = this.first
-        if(this.first === this.last){
-            this.last = null;
-        }
-        this.first = this.first.next;
-        this.size--;
-        return temp.value
-    }
-    getMin(){
-      let min = this.first.value;
-      let current = this.first;
-      while(current.next){
-       if(min > current.value) {
-         min = current.value
-        }
-       current=current.next;
+    this.first = this.first.next;
+    this.size--;
+    return temp.value;
+  }
+  getMin() {
+    let min = this.first.value;
+    let current = this.first;
+    while (current.next) {
+      if (min > current.value) {
+        min = current.value;
       }
-     return min;
+      current = current.next;
     }
-        
+    return min;
+  }
 }
 
 class Node {
-    constructor(value){
-        this.value = value;
-        this.next = null;
-    }
+  constructor(value) {
+    this.value = value;
+    this.next = null;
+  }
 }
 
 class Queue {
-    constructor(){
-        this.first = null;
-        this.last = null;
-        this.size = 0;
+  constructor() {
+    this.first = null;
+    this.last = null;
+    this.size = 0;
+  }
+  enqueue(val) {
+    var newNode = new Node(val);
+    if (!this.first) {
+      this.first = newNode;
+      this.last = newNode;
+    } else {
+      this.last.next = newNode;
+      this.last = newNode;
     }
-    enqueue(val){
-        var newNode = new Node(val);
-        if(!this.first){
-            this.first = newNode;
-            this.last = newNode;
-        } else {
-            this.last.next = newNode;
-            this.last = newNode;
-        }
-        return ++this.size;
-    }
+    return ++this.size;
+  }
 
-    dequeue(){
-        if(!this.first) return undefined;
-        let temp = this.first;
-        if(this.first === this.last){
-            this.last = null;
-        }
-        this.first = this.first.next;
-        this.size--;
-        return temp.val
+  dequeue() {
+    if (!this.first) return undefined;
+    let temp = this.first;
+    if (this.first === this.last) {
+      this.last = null;
     }
-    getMin(){
-      let min = this.first.value;
-      let current = this.first;
-      while(current.next){
-       if(min > current.value) {
-         min = current.value
-        }
-       current=current.next;
+    this.first = this.first.next;
+    this.size--;
+    return temp.val;
+  }
+  getMin() {
+    let min = this.first.value;
+    let current = this.first;
+    while (current.next) {
+      if (min > current.value) {
+        min = current.value;
       }
-     return min;
+      current = current.next;
     }
+    return min;
+  }
 }
+```
