@@ -1,6 +1,7 @@
 # Stack and Queue Implementation using Linked List (JavaScript)
 
 ## 📚 Overview
+
 **Stacks** and **Queues** are fundamental data structures that follow specific ordering principles:
 
 ### 🥞 Stack (LIFO - Last In, First Out)
