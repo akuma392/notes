@@ -26,15 +26,18 @@
 
 ## 🧱 Node Class
 
-````js
+```js
 class Node {
   constructor(value) {
     this.value = value;
     this.next = null;
   }
 }
+```
 
-## 🧱 Stack Class
+## 🧱 Stack Class (Linked List Implementation)
+
+```js
 class Stack {
   constructor() {
     this.first = null;
@@ -77,6 +80,7 @@ class Stack {
     return min;
   }
 }
+```
 
 ## 🧱 Stack Class (Array Implementation)
 
@@ -193,24 +197,26 @@ class Queue {
 ## ⏱️ Stack Time Complexity Analysis
 
 ### Linked List Implementation
-| Operation | Time Complexity | Space Complexity | Notes |
-|-----------|-----------------|------------------|-------|
-| **push(val)** | O(1) | O(1) | Add to front of linked list |
-| **pop()** | O(1) | O(1) | Remove from front of linked list |
-| **peek()** | O(1) | O(1) | Access first node |
-| **isEmpty()** | O(1) | O(1) | Check if first is null |
-| **size()** | O(1) | O(1) | Return size property |
-| **getMin()** | O(n) | O(1) | Must traverse entire list |
+
+| Operation     | Time Complexity | Space Complexity | Notes                            |
+| ------------- | --------------- | ---------------- | -------------------------------- |
+| **push(val)** | O(1)            | O(1)             | Add to front of linked list      |
+| **pop()**     | O(1)            | O(1)             | Remove from front of linked list |
+| **peek()**    | O(1)            | O(1)             | Access first node                |
+| **isEmpty()** | O(1)            | O(1)             | Check if first is null           |
+| **size()**    | O(1)            | O(1)             | Return size property             |
+| **getMin()**  | O(n)            | O(1)             | Must traverse entire list        |
 
 ### Array Implementation
-| Operation | Time Complexity | Space Complexity | Notes |
-|-----------|-----------------|------------------|-------|
-| **push(val)** | O(1) | O(1) | Add to end of array |
-| **pop()** | O(1) | O(1) | Remove from end of array |
-| **peek()** | O(1) | O(1) | Access last element |
-| **isEmpty()** | O(1) | O(1) | Check array length |
-| **size()** | O(1) | O(1) | Return array length |
-| **getMin()** | O(n) | O(1) | Must traverse entire array |
+
+| Operation     | Time Complexity | Space Complexity | Notes                      |
+| ------------- | --------------- | ---------------- | -------------------------- |
+| **push(val)** | O(1)            | O(1)             | Add to end of array        |
+| **pop()**     | O(1)            | O(1)             | Remove from end of array   |
+| **peek()**    | O(1)            | O(1)             | Access last element        |
+| **isEmpty()** | O(1)            | O(1)             | Check array length         |
+| **size()**    | O(1)            | O(1)             | Return array length        |
+| **getMin()**  | O(n)            | O(1)             | Must traverse entire array |
 
 **Key Insight**: Array implementation is simpler but may need resizing. Linked list uses more memory per element but is truly dynamic.
 
@@ -234,11 +240,21 @@ class ArrayStack {
   constructor() {
     this.items = [];
   }
-  push(value) { return this.items.push(value); }
-  pop() { return this.items.length ? this.items.pop() : null; }
-  peek() { return this.items.length ? this.items[this.items.length - 1] : null; }
-  isEmpty() { return this.items.length === 0; }
-  size() { return this.items.length; }
+  push(value) {
+    return this.items.push(value);
+  }
+  pop() {
+    return this.items.length ? this.items.pop() : null;
+  }
+  peek() {
+    return this.items.length ? this.items[this.items.length - 1] : null;
+  }
+  isEmpty() {
+    return this.items.length === 0;
+  }
+  size() {
+    return this.items.length;
+  }
 }
 
 let arrayStack = new ArrayStack();
@@ -304,16 +320,9 @@ browser.back(); // Goes back to google.com
 
 ---
 
-## 🧱 Queue Class
+## 🧱 Queue Class (Linked List Implementation)
 
 ```js
-class Node {
-  constructor(value) {
-    this.value = value;
-    this.next = null;
-  }
-}
-
 class Queue {
   constructor() {
     this.first = null;
@@ -355,8 +364,6 @@ class Queue {
   }
 }
 ```
-
-````
 
 ---
 
