@@ -10,6 +10,7 @@ function power(n, pow) {
   }
 }
 console.log(power(2, 2)); // 4
+console.log(power(2, 3)); // 8
 
 # Factorial using Recursion
 
