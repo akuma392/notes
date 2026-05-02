@@ -55,7 +55,6 @@ class Stack {
       this.first = node;
       this.first.next = tmp;
     }
-
     return ++this.size;
   }
   pop() {
