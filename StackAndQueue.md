@@ -304,6 +304,7 @@ class BrowserHistory {
       console.log(`Went back to: ${this.current}`);
       return this.current;
     }
+
     console.log("No more pages to go back to!");
     return null;
   }
