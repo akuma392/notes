@@ -698,5 +698,4 @@ console.log("Size:", arrayQueue.size()); // 2
 This comprehensive guide covers everything you need to understand and implement stacks and queues using linked lists in JavaScript! 🎉
 
 ```
-
 ```
