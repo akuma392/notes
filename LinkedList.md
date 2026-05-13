@@ -1,6 +1,7 @@
 # Singly Linked List (JavaScript)
 
 ## � Overview
+
 A **Linked List** is a linear data structure where elements are stored in nodes. Each node contains:
 
 - **value**: The data stored in the node
